@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Sabor Selecto</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="icon" href="logo sin fondo.png" type="img/png">
+</head>
+<header>
+    <div class="cabecera">
+      <div class="logo-nombre">
+        <img src="logo sin fondo.png" alt="mi logo">
+        <h1>SABOR SELECTO</h1>
+      </div>
+      <div class="botones">
+        <button onclick="window.location.href='../index.html'">Inicio</button>
+        <button onclick="window.location.href='../Carta/carta.html'">Ver Carta</button>
+        <button onclick="window.location.href='../index.html#footer'">Contáctanos</button>
+
+      </div>
+       <div id="perfilUsuario" style="display: flex; align-items: center; gap: 10px; margin-right: 20px;">
+        <img id="fotoUsuario" src="" alt="" style="width: 45px; height: 45px; border-radius: 50%; display: none;">
+        <span id="nombreUsuario" style="font-weight: bold; color: white;"></span>
+      </div>
+    </div>
+  </header>
+
+<body>
+  <video autoplay muted loop id="video-fondo">
+    <source src="video-fondo.mp4" type="video/mp4">
+  </video>
+ <div class="login-container">
+  <div class="titulo-logo">
+    <img src="logo sin fondo.png" alt="logo empresa" class="logo-empresa">
+    
+  </div>
+
+  <button id="googleLogin">
+    Iniciar sesión con Google
+    <img src="logo-google.png" alt="logo" class="logo-google">
+  </button>
+</div>
+
+
+
+  <script type="module" src="login.js"></script>
+</body>
+
+</html>

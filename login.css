@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url("fondo.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: beige;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 12px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px ;
+
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1.9s ease forwards;
+
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;            
+    transform: translateY(0); 
+  }
+}
+
+
+button {
+  background:rgb(233, 192, 89);
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;       
+  font-weight: bold;     
+  display: flex;         
+  align-items: center; 
+  justify-content: center; 
+  gap: 10px;             
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: orange;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px black;
+}
+.logo-google{
+  width: 24px;
+  height: 24px;
+}
+#video-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;  
+filter: brightness(40%);
+}
+.titulo-logo {
+  display: flex;
+  align-items: center; 
+  gap: 15px;         
+}
+
+.logo-empresa {
+  width: 200px;   
+  height: 200px;
+}
+.botones{
+  
+   position: absolute;
+  left: 20px;              
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  animation: aparecer 1.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.botones button{
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: goldenrod;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+ 
+}
+.botones button:hover{
+  opacity: 1;
+  background-color: orange;
+  transform: translateY(-3px);
+}
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+ 
+  z-index: 1000;
+  background-color: beige;
+  padding: 17px;
+  text-align: center;
+  justify-content: center;
+}
+
+.cabecera {
+ display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: aparecer 1.8s ease forwards;
+}
+
+.logo-nombre img {
+  height: 100px;
+  width: 100px;
+}
+
+.logo-nombre h1 {
+  font-size: 20px;
+  margin: 0;
+  color: black;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  header {
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo-nombre img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-nombre h1 {
+    font-size: 16px;
+  }
+
+  .login-container {
+    width: 90%;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .logo-empresa {
+    width: 120px;
+    height: 120px;
+  }
+
+  .botones {
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    left: 0;
+    gap: 8px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .login-container {
+    width: 70%;
+  }
+
+  .logo-empresa {
+    width: 150px;
+    height: 150px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}

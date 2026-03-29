@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta</title>
+  <link rel="icon" href="logo sin fondo.png" type="img/png">
+  <link rel="stylesheet" href="css.carta/carta.css">
+</head>
+
+<body id="inicio">
+  <video autoplay muted loop id="video-fondo">
+  <source src="video-fondo.mp4" type="video/mp4">
+</video>
+
+<header>
+  <div class="header-container">
+    
+    <div class="botones">
+      <button onclick="window.location.href='../index.html'">Inicio</button>
+      <button onclick="window.location.href='../reservas/reserva.html'">Reservas</button>
+      <a href="#footer"><button>Contáctanos</button></a>
+    </div>
+ 
+<div id="usuario-info" class="usuario-info">
+  <img id="usuario-foto" src="" alt="Foto de usuario">
+  <span id="usuario-nombre"></span>
+  <button id="cerrar-sesion" onclick="cerrarSesion()">Cerrar sesión</button>
+</div>
+
+
+    
+    <div class="logo-nombre">
+      <img src="logo sin fondo.png" alt="mi logo">
+      <h1>SABOR SELECTO</h1>
+    </div>
+
+   
+    <div class="buscador-header">
+      <input type="text" id="buscadorPlatos" placeholder=" Buscar un plato...">
+      <ul id="sugerencias" class="sugerencias-lista"></ul>
+    </div>
+    
+    
+  </div>
+</header>
+<div class="filtros-categoria">
+  <button data-filtro="todos">Todos</button>
+  <button data-filtro="entrada">Entradas</button>
+  <button data-filtro="plato">Platos fuertes</button>
+  <button data-filtro="bebida">Bebidas</button>
+</div>
+
+  <div class="seccion-carta">
+
+
+    <div class="contenedor-carta">
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="aji de gallina.webp" alt="Ají de Gallina">
+             <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"aji de Gallina"</h3>
+           
+            <p>Es un plato tradicional peruano con pollo desmenuzado en salsa de ají amarillo, pan, leche y frutos
+              secos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="lg_664520c66ade8d4879400887.jpg" alt="Lomo Saltado">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Lomo Saltado"</h3>
+            <p>Plato peruano de fusión chino-criolla con carne salteada, cebolla, tomate y papas fritas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="arroz chaufa.webp" alt="Arroz Chaufa">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Arroz Chaufa"</h3>
+            <p>Un clásico de la cocina peruana con influencia oriental: arroz salteado al wok con pollo, verduras
+              frescas y un toque de salsa de soya.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="arroz con pollo.avif" alt="Arroz con pollo">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Arroz con pollo"</h3>
+            <p>El arroz con pollo es un plato típico peruano de arroz verde sazonado con cilantro, acompañado de una
+              presa de pollo y verduras.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="Milanesa.jpg" alt="Milanesa">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Milanesa"</h3>
+            <p>La milanesa es una carne empanizada y frita, crocante por fuera y jugosa por dentro, servida con
+              guarniciones como arroz, papas o ensalada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="seco de cabrito.jpg" alt="Seco de cabrito">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Seco de cabrito"</h3>
+            <p>El seco de cabrito es un guiso norteño peruano, preparado con carne de cabrito macerada y cocida en
+              aderezo de ajíes, chicha de jora y cilantro, acompañado de frejoles y arroz.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="Pescado frito.jpg" alt="Pescado frito">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Pescado frito"</h3>
+            <p>El pescado frito es un plato sencillo y sabroso, elaborado con pescado fresco sazonado y dorado en
+              aceite, acompañado de arroz, yuca o papas fritas y ensalada criolla.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="chuleta frita.jpg" alt="Chuleta frita">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Chuleta frita"</h3>
+            <p>La chuleta frita es una jugosa pieza de carne de cerdo sazonada y dorada en sartén, servida con arroz,
+              papas o ensalada.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="tallarines saltados de pollo.png" alt="Tallarines saltados de pollo">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Tallarines Saltados de Pollo"</h3>
+            <p>El tallarín saltado de pollo es un plato peruano de fusión chino-criolla, preparado con fideos salteados
+              en wok junto a trozos de pollo, cebolla, tomate, sillao y especias, logrando un sabor ahumado y lleno de
+              aromas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="higado encebollado.jpg" alt="Higado encebollado">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Higado encebollado"</h3>
+            <p>El hígado encebollado es un plato criollo preparado con trozos de hígado de res salteados con cebolla,
+              ají y especias, acompañado de arroz y papas fritas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="Estofado de pollo.jpg" alt="estofado de pollo">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Estofado de pollo"</h3>
+            <p>El estofado de pollo es un guiso criollo de pollo cocido con papas, zanahoria, arvejas y aderezo de
+              tomate, servido con arroz blanco.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="plato">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="olluquito.jpeg" alt="olluquito">
+            <span class="precio"> S/. 25</span>
+          </div>
+          <div class="plato-back">
+            <h3>"Olluquito"</h3>
+            <p>El olluquito es un plato andino preparado con ollucos picados y guisados junto a carne (generalmente res
+              o charqui), acompañado de arroz.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+
+  <br>
+
+  <div class="seccion-carta">
+    <h1 class="nuestracarta" id="Entradas">Entradas</h1>
+
+    <div class="contenedor-carta">
+
+      <div class="carta-plato"data-categoria="entrada">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="ceviche.png" alt="ceviche">
+            
+          </div>
+          <div class="plato-back">
+            <h3>"Ceviche"</h3>
+            <p>El ceviche es el plato bandera del Perú, elaborado con pescado fresco marinado en jugo de limón, ají,
+              cebolla y cilantro, acompañado de camote y maíz.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="entrada">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="papa a la huancaina.jpg" alt="papa a la huancaina">
+            
+          </div>
+          <div class="plato-back">
+            <h3>"Papa a la huancaina"</h3>
+            <p>La papa a la huancaína es una entrada peruana que consiste en rodajas de papa sancochada bañadas con una
+              crema de ají amarillo, queso fresco y leche, servidas con huevo y aceituna.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carta-plato"data-categoria="entrada">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="ensalada.jpg" alt="ensalada">
+            
+          </div>
+          <div class="plato-back">
+            <h3>"Ensalada"</h3>
+            <p>La ensalada es una preparación fresca a base de verduras variadas, como lechuga, tomate, pepino y
+              zanahoria, servida como acompañamiento o entrada ligera.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="entrada">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="causa de atun.jpg" alt="causa de atun">
+            
+          </div>
+          <div class="plato-back">
+            <h3>"Causa de atun"</h3>
+            <p>La causa de atún es un plato peruano frío hecho con papa amarilla sazonada y relleno de atún con mayonesa
+              y verduras.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="entrada">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="papa rellena.webp" alt="papa rellena">
+            
+          </div>
+          <div class="plato-back">
+            <h3>"Papa rellena"</h3>
+            <p>La papa rellena es un plato peruano hecho de papa sancochada y prensada, rellena con carne guisada,
+              cebolla y aceitunas, que luego se fríe hasta quedar dorada y crujiente.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carta-plato"data-categoria="entrada">
+        <div class="plato-card">
+          <div class="plato-front">
+            <img src="tamal.jpg" alt="tamal">
+           
+          </div>
+          <div class="plato-back">
+            <h3>"Tamal"</h3>
+            <p>El tamal es una masa de maíz sazonada y rellena (generalmente con carne y aceitunas), envuelta en hojas
+              de plátano o maíz y cocida al vapor.</p>
+          </div>
+        </div>
+      </div>
+       </div>
+          </div>
+
+
+      <div class="seccion-carta">
+        <h1 class="nuestracarta" id="Bebidas">Bebidas</h1>
+
+        <div class="contenedor-carta">
+
+          <div class="carta-plato"data-categoria="bebida">
+            <div class="plato-card">
+              <div class="plato-front">
+                <img src="limonada frozen.png" alt="Limonada frozen ">
+                <span class="precio"> S/. 25</span>
+              </div>
+              <div class="plato-back">
+                <h3>"Limonada frozen"</h3>
+                <p>La limonada frozen es una bebida refrescante preparada con jugo de limón, hielo triturado y azúcar,
+                  logrando una textura granizada.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="carta-plato"data-categoria="bebida">
+            <div class="plato-card">
+              <div class="plato-front">
+                <img src="jugo de naranaja.jpg" alt="jugo de naranaja">
+                <span class="precio"> S/. 25</span>
+              </div>
+              <div class="plato-back">
+                <h3>"Jugo de naranja"</h3>
+                <p>El jugo de naranja es una bebida natural, fresca y nutritiva, elaborada a base de naranjas
+                  exprimidas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carta-plato"data-categoria="bebida">
+            <div class="plato-card">
+              <div class="plato-front">
+                <img src="chicha morada.jpg" alt="chicha morada">
+                <span class="precio"> S/. 25</span>
+              </div>
+              <div class="plato-back">
+                <h3>"Chicha morada"</h3>
+                <p>La chicha morada es una bebida tradicional peruana hecha con maíz morado hervido con frutas y
+                  especias, servida fría y dulce.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carta-plato"data-categoria="bebida">
+            <div class="plato-card">
+              <div class="plato-front">
+                <img src="aguas minerales.webp" alt="agua mineral">
+                <span class="precio"> S/. 25</span>
+              </div>
+              <div class="plato-back">
+                <h3>"Agua mineral"</h3>
+                <p>El agua mineral es una bebida natural, pura y refrescante, extraída de manantiales, rica en minerales beneficiosos para la salud.</p>
+              </div>
+            </div>
+          </div>
+
+     <div class="carta-plato" data-categoria="bebida">
+  <div class="plato-card bebida-card">
+    <div class="plato-front">
+      <img src="gaseosas.jpg" alt="Gaseosas">
+      <span class="precio"> S/. 25</span>
+    </div>
+    <div class="plato-back">
+                <h3>"Gaseosas"</h3>
+                <p>Las gaseosas son bebidas carbonatadas y dulces, disponibles en diversos sabores y muy consumidas como refresco.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <br>
+          <br>
+<section class="reseñas-clientes">
+  <h2>🗣️ Opiniones de nuestros clientes</h2>
+  <div class="contenedor-reseñas">
+   
+  </div>
+</section>
+ <footer id="footer" class="pie-pagina">
+        <div class="footer-container">
+
+
+            <div class="footer-section">
+                <h3>📍 Sabor Selecto</h3>
+                <p>&copy; 2025 Sabor Selecto - Todos los derechos reservados</p>
+                <p>Av. Larco 435 - Trujillo, Perú</p>
+            </div>
+
+
+            <div class="footer-section">
+                <h4>📞 Contáctanos</h4>
+                <p><a href="tel:+5144781549" class="call-btn">
+                        Llamar <img src="telefono.png" alt="Llamar">
+                    </a>
+                </p>
+
+                <p>
+                    <a href="https://wa.me/51987654321" target="_blank" class="whatsapp-btn">
+                        WhatsApp <img src="whatsapp.png" alt="WhatsApp">
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mailto:contacto@saborselecto.com" class="Correo-btn">Correo <img src="Correo.png"
+                            alt="Correo">
+
+                    </a>
+                </p>
+            </div>
+
+
+            <div class="footer-section">
+                <h4>⏰ Horarios</h4>
+                <p>Lunes - Viernes: 12:00 - 23:00</p>
+                <p>Sábados - Domingos: 11:00 - 01:00</p>
+            </div>
+
+
+            <div class="footer-section">
+                <h4>🌐 Siguenos</h4>
+                <a href="https://www.facebook.com/" class="Facebook-btn">Facebook <img src="Facebook.png"
+                        alt="facebook"></a> 
+                <a href="https://www.instagram.com/?hl=es-la%E2%81%B8" class="Instagram-btn">Instagram <img
+                        src="Instagram.png" alt="instagram"></a> 
+                <a href="https://www.tiktok.com/es-419/" class="TikTok-btn">TikTok <img src="Tiktok.png" alt="tiktok"></a>
+            </div>
+            <p></p>
+           
+            </div>
+
+        </div>
+         <div class="footer-section">
+                <h4>📌 Encuentranos:</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.2371205527827!2d-79.0342802679296!3d-8.119230271842977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d76feb46821%3A0x50afed5a262dbd53!2sAv.%20Larco%20435%2C%20Trujillo%2013008!5e0!3m2!1ses-419!2spe!4v1757868555512!5m2!1ses-419!2spe" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+<a href="#inicio" class="sube">↑</a>
+
+<script src="../JS/subir.js"></script>
+<script src="JS/Buscador.js"> </script>
+<script src="JS/logueo.js"></script>
+
+</body>
+
+</html>
