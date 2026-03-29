@@ -1,0 +1,196 @@
+  <!DOCTYPE html>
+  <html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Sabor Selecto</title>
+    <link rel="icon" href="logo sin fondo.png" type="image/png">
+    <link rel="stylesheet" href="cssreserva.css/reservacss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+  </head>
+
+
+  <body id="inicio">
+    <video autoplay muted loop id="video-fondo">
+      <source src="video-fondo.mp4" type="video/mp4">
+    </video>
+    <header>
+      <div class="cabecera">
+        <div class="logo-nombre">
+          <img src="logo sin fondo.png" alt="mi logo">
+          <h1>SABOR SELECTO</h1>
+        </div>
+        <div class="botones">
+          <button onclick="window.location.href='../index.html'">Inicio</button>
+          <button onclick="window.location.href='../Carta/carta.html'">Ver carta</button>
+          <a href="#footer"><button>Contactanos</button></a>
+          <button id="logoutBtn">Cerrar sesión</button>
+        </div>
+      <div id="perfilUsuario">
+  <img id="fotoUsuario" src="" alt="Foto de usuario">
+  <span id="nombreUsuario"></span>
+</div>
+      </div>
+    </header>
+
+
+
+    <div class="seccion-reserva">
+      <h1></h1>
+      <form class="form-reserva" onsubmit="event.preventDefault(); guardarReserva();">
+        <div class="titulo-logo">
+          <h1 class="texto-fuego">Reserva tu mesa </h1>
+        </div>
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="999999999" pattern="9[0-9]{8}" minlength="9"
+          maxlength="9" required>
+
+        <label for="personas">Número de personas:</label>
+        <div id="selector-personas" class="selector-personas">
+          <button type="button" data-value="1">1</button>
+          <button type="button" data-value="2">2</button>
+          <button type="button" data-value="3">3</button>
+          <button type="button" data-value="4">4</button>
+          <button type="button" data-value="5">5</button>
+          <button type="button" data-value="6">6</button>
+          <button type="button" data-value="7+">7+</button>
+        </div>
+
+        <input type="hidden" id="personas" name="personas" required>
+
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" placeholder="Seleciona una fecha" required>
+
+        <label for="hora">Horario:</label>
+        <input type="text" id="hora" name="hora" placeholder="Selecciona una hora" required>
+        <small style="color: goldenrod; font-weight: bold;">
+          Disponible solo de 12:00 PM a 4:00 PM y de 7:00 PM a 11:00 PM
+        </small>
+
+        <label for="entradas">Selecciona entradas:</label>
+  <div class="custom-select">
+    <div class="select-selected">Selecciona...</div>
+    <div class="select-items select-hide">
+      <div data-value="Ceviche Clásico">🥗 Ceviche Clásico</div>
+      <div data-value="Papa a la huancaina">🥔 Papa a la Huancaína</div>
+      <div data-value="Ensalada">🥬 Ensalada</div>
+      <div data-value="Causa de atun">🐟 Causa de Atún</div>
+      <div data-value="Papa rellena">🍴 Papa Rellena</div>
+      <div data-value="Tamal">🌽 Tamal</div>
+    </div>
+  </div>
+  <input type="hidden" id="entradas" name="entradas" required>
+
+
+        <label for="bebidas">Selecciona bebidas:</label>
+  <div class="custom-select bebidas-select">
+    <div class="select-selected">Selecciona...</div>
+    <div class="select-items select-hide">
+      <div data-value="Limonada Frozen">🍋 Limonada Frozen</div>
+      <div data-value="Jugo de naranja">🍊 Jugo de Naranja</div>
+      <div data-value="Chicha Morada">🍇 Chicha Morada</div>
+      <div data-value="Inca Kola">🥤 Inca Kola</div>
+      <div data-value="Agua Mineral">💧 Agua Mineral</div>
+    </div>
+  </div>
+  <input type="hidden" id="bebidas" name="bebidas" required>
+
+        <label for="mensaje">Mensaje (opcional):</label>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Alguna indicación especial"></textarea>
+
+        <button type="submit">Reservar</button>
+      </form>
+    </div>
+
+
+
+    <footer id="footer" class="pie-pagina">
+      <div class="footer-container">
+
+
+        <div class="footer-section">
+          <h3>📍 Sabor Selecto</h3>
+          <p>&copy; 2025 Sabor Selecto - Todos los derechos reservados</p>
+          <p>Av. Larco 435 - Trujillo, Perú</p>
+        </div>
+
+
+        <div class="footer-section">
+          <h4>📞 Contáctanos</h4>
+          <p><a href="tel:+5144781549" class="call-btn">
+              Llamar <img src="telefono.png" alt="Llamar">
+            </a>
+          </p>
+
+          <p>
+            <a href="https://wa.me/51987654321" target="_blank" class="whatsapp-btn">
+              WhatsApp <img src="whatsapp.png" alt="WhatsApp">
+            </a>
+          </p>
+
+          <p>
+            <a href="mailto:contacto@saborselecto.com" class="Correo-btn">Correo <img src="Correo.png" alt="Correo">
+
+            </a>
+          </p>
+        </div>
+
+
+        <div class="footer-section">
+          <h4>⏰ Horarios</h4>
+          <p>Lunes - Viernes: 12:00 - 23:00</p>
+          <p>Sábados - Domingos: 11:00 - 01:00</p>
+        </div>
+
+
+        <div class="footer-section">
+          <h4>🌐 Siguenos</h4>
+          <a href="https://www.facebook.com/" class="Facebook-btn">Facebook <img src="Facebook.png" alt="facebook"></a>
+          <a href="https://www.instagram.com/?hl=es-la%E2%81%B8" class="Instagram-btn">Instagram <img src="Instagram.png"
+              alt="instagram"></a>
+          <a href="https://www.tiktok.com/es-419/" class="TikTok-btn">TikTok <img src="Tiktok.png" alt="tiktok"></a>
+        </div>
+        <p></p>
+
+      </div>
+
+      </div>
+      <div class="footer-section">
+        <h4>📌 Encuentranos:</h4>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.2371205527827!2d-79.0342802679296!3d-8.119230271842977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d76feb46821%3A0x50afed5a262dbd53!2sAv.%20Larco%20435%2C%20Trujillo%2013008!5e0!3m2!1ses-419!2spe!4v1757868555512!5m2!1ses-419!2spe"
+          width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+    <script src="JS/scroll.js"> </script>
+
+    <script type="module" src="JS/firebase.js"> </script>
+
+    <script src="JS/fecha.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    <script src="JS/correo.js"></script>
+
+    <a href="#inicio" class="sube">↑</a>
+
+    <script src="../JS/subir.js"></script>
+    <script type="module" src="JS/reservas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+    <script src="JS/flatpickr.js"></script>
+    <script src="JS/Entradas.js"></script>
+    <script src="JS/Mayuscula.js"></script>
+  </body>
+
+  </html>
